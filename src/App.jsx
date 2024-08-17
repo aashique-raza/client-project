@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     project start
+    <h1 className=' text-red-600 text-2xl'> project start</h1>
     </>
   )
 }
