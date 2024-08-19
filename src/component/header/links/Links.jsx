@@ -29,18 +29,21 @@ const links=[
 
 ]
 
-function Links() {
+function Links({setMenuActive}) {
 
 
     let location =useLocation()
     let currentPath=location.pathname
     console.log(currentPath)
+    const handleMenu=()=>{
+        setMenuActive(false)
+    }
 
   return (
     <ul className='all-links'>
     {
         links.map((link) => (
-            <li key={link.pathName}>
+            <li key={link.pathName} onClick={handleMenu}>
                 <NavLink 
                     to={link.path} 
                     className={currentPath===link.path?'active':''}
