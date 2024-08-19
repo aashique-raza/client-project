@@ -1,0 +1,194 @@
+
+.header-container{
+    background-color: var(--primary-color);
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-container header{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    
+    align-items: center;
+   
+}
+
+.header-container header .logo{
+    width: 200px;
+    /* height: 40px; */
+}
+
+header .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.header-container header .nav-links{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--third-color);
+    margin-left: 20px;
+}
+
+header .nav-links .all-links{
+    
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+   /* border: 2px solid red; */
+    gap: 54px;
+}
+
+header .nav-links .all-links li {
+    font-size: 16px;
+    color: var(--third-color);
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    position: relative;
+}
+
+
+
+header .nav-links .all-links li :hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Yeh value content ke niche underline ko shift karti hai */
+    height: 2px; /* Yeh underline ki width hai */
+    background-color: var(--secondary-color); /* Underline ka color */
+}
+header .nav-links .all-links li:hover{
+    color: var(--secondary-color);
+}
+
+
+.active{
+    color: green;
+    position: relative;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Yeh value content ke niche underline ko shift karti hai */
+    height: 2px; /* Yeh underline ki width hai */
+    background-color: var(--secondary-color); /* Underline ka color */
+}
+
+.header-container header .mobile-menu{
+    display: none;
+}
+
+/* more links style------ */
+
+header .nav-links .more-links{
+    position: relative;
+    cursor: pointer;
+    margin-left: 54px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+header .nav-links .more-links .down-arrow {
+    transition: transform 0.3s ease; /* Smooth transition effect */
+margin-left: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+header .nav-links .more-links span:hover{
+    color: var(--secondary-color);
+}
+header .nav-links .more-links:hover::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Yeh value content ke niche underline ko shift karti hai */
+    height: 2px; /* Yeh underline ki width hai */
+    background-color: var(--secondary-color); /* Underline ka color */
+}
+
+
+header .nav-links .more-links:hover .down-arrow {
+    transform: rotate(180deg); /* Rotate by 180 degrees */
+    color: var(--secondary-color);
+}
+
+header .nav-links .more-links ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    gap: 30px;
+    padding: 13px 20px;
+    border-radius: 10px;
+    display: none;
+    width: 130px;
+    cursor: pointer;
+    top: 100%;
+    left: -30%;
+    
+}
+header .nav-links .more-links ul li{
+    font-size: 16px;
+    text-transform: capitalize;
+   margin-bottom: 10px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+header .nav-links .more-links ul li:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Yeh value content ke niche underline ko shift karti hai */
+    height: 2px; /* Yeh underline ki width hai */
+    background-color: var(--secondary-color); /* Underline ka color */
+}
+header .nav-links .more-links ul li:hover{
+   color: var(--secondary-color)
+   
+}
+
+header .nav-links .more-links:hover ul {
+    display: block;
+  }
+
+
+  /* login btn style ---------------------------------------------- */
+
+  header .nav-links .login-button {
+    margin-left: 30px;
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 13px 48px;
+    border: 2px solid transparent; /* Default border transparent hai */
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    box-sizing: border-box; /* Border ka size content ko affect na kare */
+}
+
+header .nav-links .login-button:hover {
+    background-color: var(--primary-color);
+    color:var(--third-color);
+    border-color: var(--third-color); /* Hover par border color change */
+}
