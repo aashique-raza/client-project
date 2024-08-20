@@ -6,25 +6,10 @@
     width: 100%;
 }
 
-/* links for mobile--- */
-.links-for-mobile {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
-    height: 0px;
-    background-color: #07080D;
-    width: 100%;
-    transition: all 0.5s ease-in-out; /* Add transition here */
-    overflow-y: hidden; /* Add this to prevent scroll bar when hidden */
-}
-
 .header-container header {
     width: 80%;
     height: 80px;
     display: flex;
-
     align-items: center;
 
 }
@@ -50,7 +35,7 @@ header .logo img {
     /* display: none; */
 }
 
-header .nav-links .all-links {
+header .all-links {
 
     display: flex;
     margin-right: auto;
@@ -59,7 +44,7 @@ header .nav-links .all-links {
     gap: 54px;
 }
 
-header .nav-links .all-links li {
+header .all-links li {
     font-size: 16px;
     color: var(--third-color);
     text-transform: capitalize;
@@ -71,7 +56,7 @@ header .nav-links .all-links li {
 
 
 
-header .nav-links .all-links li :hover::after {
+header .all-links li :hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -84,7 +69,7 @@ header .nav-links .all-links li :hover::after {
     /* Underline ka color */
 }
 
-header .nav-links .all-links li:hover {
+header .all-links li:hover {
     color: var(--secondary-color);
 }
 
@@ -111,7 +96,7 @@ header .nav-links .all-links li:hover {
 
 /* more links style------ */
 
-header .nav-links .more-links {
+header .more-links {
     position: relative;
     cursor: pointer;
     margin-left: 54px;
@@ -121,7 +106,7 @@ header .nav-links .more-links {
     letter-spacing: 1px;
 }
 
-header .nav-links .more-links .down-arrow {
+header .more-links .down-arrow {
     transition: transform 0.3s ease;
     /* Smooth transition effect */
     margin-left: 10px;
@@ -129,11 +114,11 @@ header .nav-links .more-links .down-arrow {
     font-weight: 700;
 }
 
-header .nav-links .more-links span:hover {
+header .more-links span:hover {
     color: var(--secondary-color);
 }
 
-header .nav-links .more-links:hover::after {
+header .more-links:hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -147,13 +132,13 @@ header .nav-links .more-links:hover::after {
 }
 
 
-header .nav-links .more-links:hover .down-arrow {
+header .more-links:hover .down-arrow {
     transform: rotate(180deg);
     /* Rotate by 180 degrees */
     color: var(--secondary-color);
 }
 
-header .nav-links .more-links ul {
+header .more-links ul {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -170,7 +155,7 @@ header .nav-links .more-links ul {
 
 }
 
-header .nav-links .more-links ul li {
+header .more-links ul li {
     font-size: 16px;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -179,7 +164,7 @@ header .nav-links .more-links ul li {
     position: relative;
 }
 
-header .nav-links .more-links ul li:hover::after {
+header .more-links ul li:hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -192,18 +177,18 @@ header .nav-links .more-links ul li:hover::after {
     /* Underline ka color */
 }
 
-header .nav-links .more-links ul li:hover {
+header .more-links ul li:hover {
     color: var(--secondary-color)
 }
 
-header .nav-links .more-links:hover ul {
+header .more-links:hover ul {
     display: block;
 }
 
 
 /* login btn style ---------------------------------------------- */
 
-header .nav-links .login-button {
+header .login-button {
     margin-left: 30px;
     background-color: var(--third-color);
     color: var(--primary-color);
@@ -221,7 +206,7 @@ header .nav-links .login-button {
     /* Border ka size content ko affect na kare */
 }
 
-header .nav-links .login-button:hover {
+header .login-button:hover {
     background-color: var(--primary-color);
     color: var(--third-color);
     border-color: var(--third-color);
@@ -234,7 +219,7 @@ header .nav-links .login-button:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-   /* border: 2px solid green; */
+    /* border: 2px solid green; */
 
 }
 
@@ -243,12 +228,12 @@ header .nav-links .login-button:hover {
 .header-container header .mobile-menu .close-icon {
     opacity: 0;
     visibility: hidden;
-    position: absolute; 
+    position: absolute;
     top: -10px;
     right: 10px;
     font-size: 22px;
     color: rgb(205, 205, 205);
-    transition: opacity 0.5s ease, visibility 0.5s ease; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 
@@ -264,187 +249,229 @@ header .nav-links .login-button:hover {
         padding: 0px 10px;
         position: relative;
     }
-     .bg{
+
+    .bg {
         background-color: #07080D !important;
     }
+
     .header-container header .logo {
         width: 120px;
         /* height: 40px; */
     }
+
     .header-container header .nav-links {
-    
-        display: none;
-    }
-   
-    .menuActive {
-        padding: 0px 10px;
-        color: var(--third-color);
+        padding: 0px 14px;
         position: absolute;
-        top: 100%;
+        top: 80%;
         left: 0;
-        height: 500px;
-        opacity: 1;
-        visibility: visible;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
         background-color: #07080D;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-end;
-        justify-content: start;
-        gap: 7px;
-        z-index: 20;
-        width: 100%;
-        overflow-y: scroll;
-        transition: all 0.5s ease-in-out; /* Ensure transition is here as well */
+        color: var(--third-color);
+        margin-left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        visibility: hidden;
+        gap: 4px;
+        margin: 0px;
     }
 
-    .all-mobile-links .all-links{
+    .menuActive {
+        margin-left: 0px;
+        padding: 0px 14px;
+        position: absolute;
+
+        visibility: visible;
+        opacity: 1;
+        top: 80%;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        background-color: #07080D;
+
         display: flex;
-        justify-content: flex-start;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-end;
         gap: 10px;
-        font-size: 10px;
-        font-family: sans-serif;
-        font-weight: 600;
-        text-transform: capitalize;
+        color: var(--third-color);
+        margin-left: 0px;
+        transition: all 0.5s ease-in-out;
     }
 
-    .all-mobile-links .more-links{
-        text-align: end;
-        margin-top: 0;
-        font-size: 10px;
-        font-family: sans-serif;
-        font-weight: 600;
-    }
-    .all-mobile-links .more-links .down-arrow{
-        font-size: 16px;
-    }
-
-    .all-mobile-links .more-links ul {
+    header .all-links {
         display: flex;
         flex-direction: column;
+        gap: 10px;
         justify-content: flex-start;
-        align-items: flex-end;
-        gap: 3px;
-        opacity: 0;
+        align-items: end;
+        margin: 0px;
+    }
+
+    header .all-links li {
+        font-size: 11px;
+        text-transform: capitalize;
+        font-family: sans-serif;
+
+    }
+
+    header .login-button {
+        margin-left: 0px;
+
+        font-size: 11px;
+
+        padding: 13px 28px;
+
+        border-radius: 6px;
+
+        transition: all 0.2s ease-in;
+
+    }
+
+    /* load more links------------------------------------ */
+    header .more-links {
+        position: static;
+
+        margin: 0px;
+        font-size: 13px;
+        padding-right: 0px;
+
+        text-align: end;
+    }
+
+
+    header .more-links ul {
+        margin: 0px;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        gap: 10px;
+        padding: 6px 0px;
         visibility: hidden;
-        max-height: 0;
-        overflow: hidden; /* Add this to prevent content from being visible when height is 0 */
+        opacity: 0;
+        height: 0;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+
+    /* When active (dropdown shown) */
+    header .more-links ul.show-drop-down {
+        visibility: visible;
+        opacity: 1;
+        height: fit-content;
+        /* Adjust height smoothly */
         transition: all 0.3s ease-in-out;
     }
-    
-    .isMoreLinksActive {
-        opacity: 1;
-        visibility: visible;
-        max-height: 150px; /* Use max-height instead of height */
+
+    header .more-links .down-arrow {
+        transition: transform 0.3s ease;
+        margin-left: 10px;
+        font-size: 22px;
+        font-weight: 700;
     }
     
-    .all-mobile-links .more-links ul li {
+    /* Arrow rotation when dropdown is shown */
+    header .more-links.show-drop-down .down-arrow {
+        transform: rotate(180deg); /* Rotate arrow */
+    }
+    header .more-links ul li {
+        font-size: 11px;
+        text-transform: capitalize;
         margin-bottom: 0px;
         font-family: sans-serif;
-        text-transform: capitalize;
+        letter-spacing: 1px;
+        position: relative;
     }
-    
-    
- .all-mobile-links .login-button {
-    margin-left: 30px;
-    background-color: var(--third-color);
-    color: var(--primary-color);
-    font-size: 16px;
-    font-family: sans-serif;
-    padding: 13px 48px;
-    border: 2px solid transparent;
-    /* Default border transparent hai */
-    border-radius: 6px;
-    text-transform: capitalize;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-    box-sizing: border-box;
-    /* Border ka size content ko affect na kare */
-}
 
-.all-mobile-links .login-button:hover {
-    background-color: var(--primary-color);
-    color: var(--third-color);
-    border-color: var(--third-color);
-    /* Hover par border color change */
-}
- 
 
-  
 
-.header-container  .menuActive::-webkit-scrollbar {
-    display: none;
-}
 
-/* For Firefox */
-.header-container  .menuActive {
-    scrollbar-width: none; /* Hide scrollbar */
-    -ms-overflow-style: none; /* IE and Edge */
-}
+
+
+    .header-container .menuActive::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For Firefox */
+    .header-container .menuActive {
+        scrollbar-width: none;
+        /* Hide scrollbar */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
 
     /* By default, show the hamburger icon and hide the close icon */
-.header-container header .mobile-menu .ham-burger {
-    opacity: 1;
-    visibility: visible;
+    .header-container header .mobile-menu .ham-burger {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header-container header .mobile-menu .close-icon {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* When the menu is active, show the close icon and hide the hamburger */
+    .header-container header .mobile-menu.active .ham-burger {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header-container header .mobile-menu.active .close-icon {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+
+
+
 }
 
-.header-container header .mobile-menu .close-icon {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* When the menu is active, show the close icon and hide the hamburger */
-.header-container header .mobile-menu.active .ham-burger {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.header-container header .mobile-menu.active .close-icon {
-    opacity: 1;
-    visibility: visible;
-}
-    
-
-
-
-
-
-}
-
-@media only screen and (min-width:926px) and (max-width:1400px){
+@media only screen and (min-width:926px) and (max-width:1400px) {
     .header-container header {
         width: 100%;
-       padding: 0px 12px;
+        padding: 0px 12px;
     }
-    
+
     .header-container header .logo {
         width: 150px;
         /* height: 40px; */
     }
-    
 
 
-header .nav-links .all-links {
 
-    gap: 18px;
-}
+    header .nav-links .all-links {
 
-header .nav-links .all-links li {
-    font-size: 11px;
-    
-}
-header .nav-links .login-button {
-    margin-left: 25px;
-   
-    font-size: 12px;
-   
-    padding: 13px 20px;
-  
-}
+        gap: 18px;
+    }
+
+    header .nav-links .all-links li {
+        font-size: 11px;
+
+    }
+
+    header .nav-links .login-button {
+        margin-left: 25px;
+
+        font-size: 12px;
+
+        padding: 13px 20px;
+
+    }
 
 
-    
+
 
 }
